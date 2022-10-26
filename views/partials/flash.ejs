@@ -1,0 +1,30 @@
+<% if(success && success.length){ %> 
+<div class="alert alert-success alert-dismissible fade show " role="alert">
+    <%=success %> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %> 
+<%  if(warning && warning.length){%> 
+    <div class="alert alert-warning alert-dismissible fade show " data-bs-dismiss="alert" role="alert" aria-label="Close">
+        <%=warning %> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %> 
+    <% if(rating && rating.length){ %> 
+    <div class="alert alert-primary alert-dismissible fade show " role="alert">
+        <%=rating %> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %> 
+    <% if(danger && danger.length){ %> 
+    <div class="alert alert-danger alert-dismissible fade show " role="alert">
+        <%=danger %> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %> 
+    <% if(error && error.length){ %> 
+    <div class="alert alert-danger alert-dismissible fade show " role="alert">
+        <%=error %> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %> 

@@ -1,0 +1,27 @@
+<% layout("layout/boilerplate") %>
+
+    <div class="card  ">
+        <h5 class="card-title text-center text-primary pt-2 pb-2">
+            <b><%= campground.author.username.toUpperCase() %></b>
+        </h5>
+        <% for(let review of campground.reviews) {%>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <p class="starability-result" data-rating="<%= review.rating %>">
+                            Rated: <%= review.rating %>  stars
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-subtitle mb-2 text-muted"> By:-<%= review.author.username %>
+                        </h4>
+                        <h4 class="card-subtitle mb-3"> Reviews :- <%= review.body%>.</h4>
+                    </div>
+                </div>
+            <% } %>
+    </div>
+
+    <div class="text-center mb-3 mt-4">
+        <a href="/campgrounds/<%=campground._id%>" class="card-link btn btn-primary ">Back to
+            show
+            page</a>
+    </div>
